@@ -6,20 +6,16 @@ import '../models/googleMapModels.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-//import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:location/location.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-const apiKey = "AIzaSyBNeuqvva58TSbrFP-AOxRjDuTNC9xYSh4";
+const apiKey = "api_key";
 
 Future<String> getRouteCoordinates(LatLng l1, LatLng l2)async{
-  //https://maps.googleapis.com/maps/api/directions/output?parameters
     String url = "https://maps.googleapis.com/maps/api/directions/json?origin=${l1.latitude},${l1.longitude}&destination=${l2.latitude},${l2.longitude}&key=$apiKey";
     http.Response response = await http.get(Uri.parse(url));
     Map values = jsonDecode(response.body);
-    print("###bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
-    print("### $values");
     return (values["routes"][0]["overview_polyline"]["points"]);
 }
 
@@ -163,11 +159,7 @@ final Completer<GoogleMapController> _mapController = Completer();
       compassEnabled: true,
       padding: EdgeInsets.only(
       bottom:MediaQuery.of(context).size.height*0.25),
-      //scrollGesturesEnabled: true,
-      //zoomControlsEnabled: true,
-      //zoomGesturesEnabled: true,
       tiltGesturesEnabled: false,
-      //onCameraMove:(position) => _lastMapPosition = position.target,
       mapType: MapType.terrain,
       onMapCreated:(mapController) {
         _mapController.complete(mapController);
@@ -178,14 +170,6 @@ final Completer<GoogleMapController> _mapController = Completer();
       ),
       markers: marker.values.toSet(),
       polylines: _polyline,
-      /*polylines: {
-        Polyline(
-          polylineId: PolylineId('route'), 
-          points: polylineCoordinates, 
-          color: Colors.blue, 
-          width: 6
-        )
-      },*/
       onTap: (LatLng latLng) async{
         // you have latitude and longitude here 
         

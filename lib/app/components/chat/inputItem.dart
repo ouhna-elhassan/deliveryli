@@ -36,19 +36,12 @@ void uploadImageFile(BuildContext context, File imageFile, ScrollController scro
   try {
     TaskSnapshot snapshot = await uploadTask;
     var imageUrl = await snapshot.ref.getDownloadURL();
-    /*setState(() {
-      isLoading = false;
-      onSendMessage(imageUrl, MessageType.image);
-    });*/
     chatProvider.sendChatMessage(imageUrl, 2, currentUserId, "123456");
     scrollController.animateTo(
       0,
       duration: const Duration(milliseconds: 300), curve: Curves.easeOut
     );
   } on FirebaseException catch (e) {
-    /*setState(() {
-      isLoading = false;
-    });*/
     Fluttertoast.showToast(msg: e.message ?? e.toString());
   }
 }

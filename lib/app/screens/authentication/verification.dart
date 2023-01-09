@@ -64,11 +64,6 @@ class _OtpScreenState extends State<OtpScreen> {
     ).onError((error, stackTrace) => print("############################ $error"));
   }
   TextEditingController smscode = TextEditingController();
-  /*TextEditingController smscode2 = TextEditingController();
-  TextEditingController smscode3 = TextEditingController();
-  TextEditingController smscode4 = TextEditingController();
-  TextEditingController smscode5 = TextEditingController();
-  TextEditingController smscode6 = TextEditingController();*/
 
   @override
   void initState() {

@@ -96,7 +96,6 @@ class Locations {
       regions: reg,
     );
   }
-  //Map<String, dynamic> toJson() => _$LocationsToJson(this);
 
   final List<dynamic> offices;
   final List<dynamic> regions;

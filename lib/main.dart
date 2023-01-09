@@ -1,5 +1,4 @@
 import 'package:deliveryli/app/screens/sliders/splash.dart';
-import 'package:deliveryli/app/services/mapState.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -15,7 +14,6 @@ void main() async{
     MultiProvider(
       providers: [
         ChangeNotifierProvider.value(value: ChatProvider()), 
-        ChangeNotifierProvider.value(value: MapState()), 
       ], 
       child: const MyApp(),
     )
@@ -29,7 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Deliveryli',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

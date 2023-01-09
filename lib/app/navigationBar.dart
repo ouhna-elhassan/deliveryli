@@ -19,9 +19,9 @@ class _NavBarState extends State<NavBar> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
   final List<Widget> _widgetOptions = <Widget>[
-    HomePage(),
-    ChatHome(),
-    Order(),
+    const HomePage(),
+    const ChatHome(),
+    const Order(),
     Profile(),
   ];
 

@@ -39,8 +39,6 @@ Column messageText(DocumentSnapshot? documentSnapshot){
   );
 }
 
-//messageText(snapshot.data?.docs[index],index%2==0?Colors.black:Colors.white,index%2==0?const Color.fromARGB(255, 226, 227, 227):const Color.fromARGB(255, 53, 94, 128), 12),
-
 Column messageImage(DocumentSnapshot? documentSnapshot, BuildContext context){
   ChatMessages chatMessages = ChatMessages.fromDocument(documentSnapshot!);
   return Column(
