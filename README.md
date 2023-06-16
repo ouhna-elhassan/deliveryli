@@ -1,16 +1,23 @@
-# deliveryli
+# Deliveryli
 
-A new Flutter project.
+Deliveryli is a mobile app built with Flutter and Dart that provides delivery services. It leverages Firebase services for backend functionality and integrates with Google Maps for location and navigation features.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- User Registration and Authentication: Users can create accounts and authenticate themselves to access the app.
+- Order Placement: Users can place delivery orders by specifying pickup and drop-off locations.
+- Real-time Tracking: Once an order is placed, users can track the status and location of their delivery in real-time on the map.
+- Payment Integration: Users can make payments for their orders securely within the app using paypal payment method.
+- Review and Rating: Users can provide feedback and ratings for their delivery experience.
 
-A few resources to get you started if this is your first Flutter project:
+## Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Before running the app, ensure that you have the following installed:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter SDK: [Installation Guide](https://flutter.dev/docs/get-started/install)
+- Dart SDK: [Installation Guide](https://dart.dev/get-dart)
+
+## Technologies
+ * Flutter & dart
+ * Firebase 
+ * Google maps
